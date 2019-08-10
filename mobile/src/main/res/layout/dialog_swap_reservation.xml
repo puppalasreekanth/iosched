@@ -22,7 +22,7 @@
 
         <variable
             name="viewModel"
-            type="com.google.samples.apps.iosched.ui.reservation.SwapReservationViewModel" />
+            type="com.sree.oneapp.ui.reservation.SwapReservationViewModel" />
 
     </data>
 

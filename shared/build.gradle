@@ -52,10 +52,12 @@ android {
             minifyEnabled false
             buildConfigField "String", "REGISTRATION_ENDPOINT_URL", "\"https://events-d07ac.appspot.com/_ah/api/registration/v1/register\""
             buildConfigField "String", "CONFERENCE_DATA_URL", "\"https://firebasestorage.googleapis.com/v0/b/io2018-festivus-prod/o/sessions.json?alt=media&token=89140adf-e228-45a5-9ae3-8ed01547166a\""
+            debuggable = false
         }
         debug {
             buildConfigField "String", "REGISTRATION_ENDPOINT_URL", "\"https://events-dev-62d2e.appspot.com/_ah/api/registration/v1/register\""
             buildConfigField "String", "CONFERENCE_DATA_URL", "\"https://firebasestorage.googleapis.com/v0/b/io2018-festivus/o/sessions.json?alt=media&token=019af2ec-9fd1-408e-9b86-891e4f66e674\""
+            debuggable = true
         }
         staging {
             initWith debug
@@ -65,6 +67,7 @@ android {
             // "staging" build type.
             // Used with :test-shared, which doesn't have a staging variant.
             matchingFallbacks = ['debug']
+            debuggable = true
         }
     }
 
@@ -132,7 +135,7 @@ dependencies {
     testImplementation "com.nhaarman:mockito-kotlin:$rootProject.mockitoKotlinVersion"
 
     // unit tests livedata
-    testImplementation "androidx.arch.core:core-testing:$rootProject.lifecycleVersion"
+    testImplementation "androidx.arch.core:core-testing:${rootProject.lifecycleVersion}"
 }
 
 apply plugin: 'com.google.gms.google-services'

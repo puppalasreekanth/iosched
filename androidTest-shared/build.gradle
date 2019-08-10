@@ -28,6 +28,14 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
+    buildTypes {
+        release {
+            debuggable = false
+        }
+        debug {
+            debuggable = true
+        }
+    }
 }
 
 dependencies {

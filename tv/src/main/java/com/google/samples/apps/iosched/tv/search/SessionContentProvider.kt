@@ -32,7 +32,7 @@ import com.google.samples.apps.iosched.tv.TvApplication
 import timber.log.Timber
 import javax.inject.Inject
 
-private const val AUTHORITY = "com.google.samples.apps.iosched.tv"
+private const val AUTHORITY = "com.sree.oneapp.tv"
 // UriMatcher constant for search suggestions
 private const val SEARCH_SUGGEST = 1
 

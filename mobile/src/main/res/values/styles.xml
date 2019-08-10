@@ -112,7 +112,10 @@
         <item name="android:textStyle">bold</item>
         <item name="textAllCaps">false</item>
     </style>
-
+    <style name="TextAppearance.MaterialComponents.Tab" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/mtrl_tabs_icon_color_selector</item>
+    </style>
+//Widget.MaterialComponents.BottomNavigationView.Colored
     <style name="TextAppearance.IOSched.BottomNavigationView" parent="@style/TextAppearance.MaterialComponents.BottomNavigationView.Colored">
         <item name="android:fontFamily">@font/google_sans</item>
         <item name="android:textColor">@color/bottom_nav_item</item>
@@ -356,5 +359,16 @@
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:paddingLeft">@dimen/margin_normal</item>
         <item name="android:paddingRight">@dimen/margin_normal</item>
+    </style>
+
+    <style name="TextAppearance.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:textColor">@color/mtrl_bottom_nav_colored_item_tint</item>
+    </style>
+
+    <style name="TextAppearance.MaterialComponents.BottomNavigationView" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/mtrl_bottom_nav_item_tint</item>
+        <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+        <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
+        <item name="itemTextColor">@color/mtrl_bottom_nav_colored_item_tint</item>
     </style>
 </resources>

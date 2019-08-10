@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside"
-        app:lottie_fileName="anim/io18_logo.json"
+        app:lottie_fileName="anim/992-articulation.json"
         app:lottie_loop="true" />
 
     <TextView

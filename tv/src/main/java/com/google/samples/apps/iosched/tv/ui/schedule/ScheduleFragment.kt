@@ -176,7 +176,7 @@ class ScheduleFragment : RowsSupportFragment() {
 
     companion object {
 
-        const val ARG_CONFERENCE_DAY = "com.google.samples.apps.iosched.tv.ARG_CONFERENCE_DAY"
+        const val ARG_CONFERENCE_DAY = "com.sree.oneapp.tv.ARG_CONFERENCE_DAY"
         const val TAG_LOADING_FRAGMENT = "tag_loading_fragment"
 
         fun newInstance(day: Int): ScheduleFragment {

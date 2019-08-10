@@ -23,7 +23,7 @@ apply plugin: 'io.fabric'
 android {
     compileSdkVersion rootProject.compileSdkVersion
     defaultConfig {
-        applicationId "com.google.samples.apps.iosched"
+        applicationId "com.sree.oneapp"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode rootProject.versionCodeMobile
@@ -62,12 +62,14 @@ android {
             resValue "string",
                     "google_maps_key",
                     "AIzaSyD5jqwKMm1SeoYsW25vxCXfTlhDBeZ4H5c"
+            debuggable = false
         }
         debug {
             manifestPlaceholders = [crashlyticsEnabled: false]
             resValue "string",
                     "google_maps_key",
                     "AIzaSyAhJx57ikQH9rYc8IT8W3d2As5cGHMBvuo"
+            debuggable = true
         }
         staging {
             initWith debug
@@ -77,6 +79,7 @@ android {
             // "staging" build type.
             // Used with :test-shared, which doesn't have a staging variant.
             matchingFallbacks = ['debug']
+            debuggable = true
         }
     }
     dataBinding {
@@ -125,7 +128,7 @@ dependencies {
     // Architecture Components
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
     kapt "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycleVersion"
-    testImplementation "androidx.arch.core:core-testing:$rootProject.lifecycleVersion"
+    testImplementation "androidx.arch.core:core-testing:${rootProject.lifecycleVersion}"
 
     // Dagger
     implementation "com.google.dagger:dagger-android:$rootProject.dagger"
@@ -164,8 +167,8 @@ dependencies {
 
     // Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
-    stagingImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
-    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+    stagingImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}"
 
     // Solve conflicts with gson. DataBinding is using an old version.
     implementation "com.google.code.gson:gson:$gsonVersion"

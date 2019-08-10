@@ -37,19 +37,20 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/onboarding_margins" />
 
-    <ImageView
-        android:id="@+id/customize"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/health"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/margin_normal"
         android:fitsSystemWindows="true"
         android:importantForAccessibility="no"
+        android:padding="@dimen/spacing_normal"
         app:layout_constraintBottom_toTopOf="@id/build_schedule"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside"
-        app:srcCompat="@drawable/customize_schedule" />
+        app:lottie_fileName="anim/5620-doctoranimation.json"
+        app:lottie_loop="true" />
 
     <TextView
         android:id="@+id/build_schedule"
@@ -61,7 +62,7 @@
         app:layout_constraintBottom_toTopOf="@id/benefits"
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintStart_toStartOf="@id/guideline_start"
-        app:layout_constraintTop_toBottomOf="@id/customize" />
+        app:layout_constraintTop_toBottomOf="@id/health" />
 
     <TextView
         android:id="@+id/benefits"

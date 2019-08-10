@@ -25,11 +25,11 @@
 
         <variable
             name="userSession"
-            type="com.google.samples.apps.iosched.model.userdata.UserSession" />
+            type="com.sree.oneapp.model.userdata.UserSession" />
 
         <variable
             name="eventListener"
-            type="com.google.samples.apps.iosched.ui.sessioncommon.EventActions" />
+            type="com.sree.oneapp.ui.sessioncommon.EventActions" />
 
         <variable
             name="showReservations"
@@ -83,7 +83,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.samples.apps.iosched.ui.reservation.ReservationTextView
+        <com.sree.oneapp.ui.reservation.ReservationTextView
             android:id="@+id/reservation_status"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
